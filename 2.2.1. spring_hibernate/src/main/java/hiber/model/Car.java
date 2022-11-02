@@ -6,6 +6,9 @@ import javax.persistence.*;
 @Table(name="car")
 public class Car {
 
+    @OneToOne
+    private User user;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
